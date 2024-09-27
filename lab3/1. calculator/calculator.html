@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css"/>
+</head>
+<body align ="Center">
+    <div class="container">
+        <h1 class="header">Calculator</h1>
+        
+        <div class="inputs">
+            <div class="num1">
+                <label for="num1" class="num1">First Number:</label>
+                <input type="number" id="num1">
+            </div>
+            <div class="num2">
+                <label for="num2" class="num2">Second Number:</label>
+                <input type="number" id="num2">
+            </div>
+        </div>
+        
+        
+        <br>
+        
+        <button class="button" id="add" onclick="calculate('add')">Add</button>
+        <button class="button" id="subtract" onclick="calculate('subtract')">Subtract</button>
+        <button class="button" id="multiply" onclick="calculate('multiply')">Multiply</button>
+        <button class="button" id="divide" onclick="calculate('division')">Division</button>
+        <button class="button" id="clear" onclick="clearField()">Clear</button>
+        
+        <h2 class="result">Result:</h2>
+        <p id="result">0</p>
+    </div>
+
+    <script>
+        function calculate(operation) {
+         
+            var num1 = parseFloat(document.getElementById('num1').value);
+            var num2 = parseFloat(document.getElementById('num2').value);
+            var result;
+            
+            if (!num1 || !num2){
+                result='Enter both numbers'
+                
+            } 
+            else{
+                switch (operation) {
+                    case 'add':
+                        result = num1 + num2;
+                        break;
+                    case 'subtract':
+                        result = num1 - num2;
+                        break;
+                    case 'multiply':
+                        result = num1 * num2;
+                        break;
+                    case 'division':
+                        if (num2 == 0) {
+                            result = 'cannot divide by 0'
+                            break
+                        }
+                        result = num1 / num2;
+                        break;
+                    default:
+                        result = 'Invalid operation';
+                }
+            }
+
+            document.getElementById('result').innerText = result;
+        }
+
+        function clearField(){
+            document.getElementById('result').innerText = '0'
+            document.getElementById('num1').value = ''
+            document.getElementById('num2').value = ''
+        }
+    </script>
+</body>
+</html>

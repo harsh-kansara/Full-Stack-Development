@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Student Registration</h2>
+        <form id="registrationForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter username" oninput="validateUsername()">
+            <small class="error" id="usernameError"></small>
+
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Enter email" oninput="validateEmail()">
+            <small class="error" id="emailError"></small>
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Enter phone number" oninput="validatePhone()">
+            <small class="error" id="phoneError"></small>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" oninput="checkPassword()">
+            <small class="error" id="passwordError"></small>
+
+            <div id="passwordChecklist">
+                <p>Password must meet the following criteria:</p>
+                <ul>
+                    <li id="length" class="invalid">At least 7 characters</li>
+                    <li id="uppercase" class="invalid">At least one uppercase letter</li>
+                    <li id="number" class="invalid">At least one number</li>
+                    <li id="special" class="invalid">At least one special character (&, $, #, @)</li>
+                </ul>
+            </div>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" oninput="validateConfirmPassword()">
+            <small class="error" id="confirmPasswordError"></small>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

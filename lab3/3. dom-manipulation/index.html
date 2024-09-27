@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+    <style>
+        #myElement {
+            color: blue;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .image-class {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="header">Welcome to DOM Manipulation</h1>
+    <p id="myElement">This is a paragraph with an ID of "myElement".</p>
+    
+    <div class="container">
+        <p class="text-class">First paragraph inside container</p>
+        <p class="text-class">Second paragraph inside container</p>
+    </div>
+    
+    <!-- <img id="myImage" class="image-class" src="https://via.placeholder.com/300x200" alt="Placeholder Image"> -->
+    <img id="myImage" class="image-class" src="https://images.pexels.com/photos/130576/pexels-photo-130576.jpeg?cs=srgb&dl=pexels-pok-rie-33563-130576.jpg&fm=jpg" alt="Placeholder Image">
+
+    <br><br>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeColorAndPosition()">Change Color and Position</button>
+    <button onclick="changeImage()">Change Image</button>
+    <button onclick="addTextNode()">Add Text Node</button>
+    <button onclick="deleteNode()">Delete Node</button>
+
+    <script src="source.js">
+        
+    </script>
+
+</body>
+</html>
