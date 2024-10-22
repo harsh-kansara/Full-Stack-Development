@@ -1,0 +1,18 @@
+/* src/App.css - This is the general app CSS file */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Resetting any previous background */
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 24px; /* Prevents default global font-size changes */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
